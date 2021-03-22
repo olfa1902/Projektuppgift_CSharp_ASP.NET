@@ -1,0 +1,66 @@
+﻿@model Projektuppgift_CSharp_ASP.NET.Models.Movie
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Scaffoldad HTML-kod via Razor designad för att ändra film-instanser-->
+
+<h1 class="row justify-content-center">Edit Movie</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-5 col-md-offset-3">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea rows="10" asp-for="Description" class="form-control descriptionfield"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Length" class="control-label"></label>
+                <input asp-for="Length" class="form-control" />
+                <span asp-validation-for="Length" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrailerUrl" class="control-label"></label>
+                <input asp-for="TrailerUrl" class="form-control" />
+                <span asp-validation-for="TrailerUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IMDBUrl" class="control-label"></label>
+                <input asp-for="IMDBUrl" class="form-control" />
+                <span asp-validation-for="IMDBUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="row justify-content-center redirectlink">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

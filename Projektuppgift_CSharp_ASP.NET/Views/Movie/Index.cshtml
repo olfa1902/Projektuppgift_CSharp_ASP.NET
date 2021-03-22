@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Projektuppgift_CSharp_ASP.NET.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Scaffoldad HTML-kod via Razor designad för att visa film-instanserna-->
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-success ml-1">Create New</a>
+</p>
+
+@foreach (var item in Model)
+{
+<div class="movielist">
+    <a href="@item.IMDBUrl" target="_blank">
+        <img alt="Omslagsbild för filmen: @item.Title" src="@item.ImageUrl" />
+
+        <b>@Html.DisplayFor(modelItem => item.Title)</b>
+    </a>
+
+    <p>@Html.DisplayFor(modelItem => item.Category) | @Html.DisplayFor(modelItem => item.Length) </p>
+
+    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+
+    <div class="movielistbottom">
+        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a>
+        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary ml-1">Details</a>
+        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger ml-1">Delete</a>
+    </div>
+</div>
+}

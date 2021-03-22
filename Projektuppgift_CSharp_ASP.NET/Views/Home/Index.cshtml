@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Projektuppgift_CSharp_ASP.NET.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+        @foreach (var item in Model)
+        {
+<div class="movielist">
+    <a href="@item.IMDBUrl" target="_blank">
+        <img alt="Omslagsbild för filmen: @item.Title" src="@item.ImageUrl" />
+
+        <b>@Html.DisplayFor(modelItem => item.Title)</b>
+    </a>
+
+    <p>@Html.DisplayFor(modelItem => item.Category) | @Html.DisplayFor(modelItem => item.Length) </p>
+
+    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+
+    <div class="movielistbottom">
+        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-primary ml-1">Details</a>
+    </div>
+</div>
+}

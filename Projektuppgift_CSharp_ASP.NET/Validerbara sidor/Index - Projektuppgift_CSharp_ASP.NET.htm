@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index - Projektuppgift_CSharp_ASP.NET</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-white border-bottom box-shadow mb-3" id="navigationmeny">
+            <div class="container navdesign">
+                <form action="/" method="post">
+                    <button class="navtextbuttons">Olivers Filmlista <br /> - De du måste se om!</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTlsnNsF2Pdb7F_38iPopLqQf1Hup3nNBrw0kSKfqDEUZ8hKoXZrbnEnYBzVbzcuXWVBWlvM-1ehanjbxWhd0RToj5b9m1uohVdskX0NErK--6vtzFp0iviDleCfdRXgpCTfUb1wMxYiNdVWtc4tn627G0V7FKIT1JWeJvA8u_DGGg" /></form>
+                <button class="navbar-toggler spanclass" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item borderclass">
+                            <a class="navtext" href="/">Home</a>
+                        </li>
+
+                            <li class="nav-item borderclass">
+                                <a class="navtext" href="/Movie">Admin</a>
+                            </li>
+                    </ul>
+                    
+<ul class="navbar-nav">
+    <li class="nav-item borderclass">
+        <!--<a class="navtextaccount" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">oliver.farnskog@gmail.com!</a> -->
+        <form action="/Identity/Account/Manage" method="post">
+            <button class="navtextbuttons" title="Manage">oliver.farnskog@gmail.com!</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTlsnNsF2Pdb7F_38iPopLqQf1Hup3nNBrw0kSKfqDEUZ8hKoXZrbnEnYBzVbzcuXWVBWlvM-1ehanjbxWhd0RToj5b9m1uohVdskX0NErK--6vtzFp0iviDleCfdRXgpCTfUb1wMxYiNdVWtc4tn627G0V7FKIT1JWeJvA8u_DGGg" /></form>
+        
+    </li>
+    <li class="nav-item borderclass">
+        <form class="form-inline" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+            <button id="logoutbutton" class="navtext btn btn-link">Logout</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTlsnNsF2Pdb7F_38iPopLqQf1Hup3nNBrw0kSKfqDEUZ8hKoXZrbnEnYBzVbzcuXWVBWlvM-1ehanjbxWhd0RToj5b9m1uohVdskX0NErK--6vtzFp0iviDleCfdRXgpCTfUb1wMxYiNdVWtc4tn627G0V7FKIT1JWeJvA8u_DGGg" /></form>
+    </li>
+</ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="pb-3">
+            
+
+<div class="movielist">
+    <a href="https://www.imdb.com/title/tt0104952/" target="_blank">
+        <img alt="Omslagsbild för filmen: My Cousin Vinny" src="https://m.media-amazon.com/images/M/MV5BMTQxNDYzMTg1M15BMl5BanBnXkFtZTgwNzk4MDgxMTE@._V1_UX182_CR0,0,182,268_AL_.jpg" />
+
+        <b>My Cousin Vinny</b>
+    </a>
+
+    <p>Comedy, Crime | 2h </p>
+
+    <p>Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.</p>
+
+    <div class="movielistbottom">
+        <a class="btn btn-sm btn-primary ml-1" href="/Home/Details/1">Details</a>
+    </div>
+</div>
+<div class="movielist">
+    <a href="https://www.imdb.com/title/tt0104257/" target="_blank">
+        <img alt="Omslagsbild för filmen: A Few Good Men" src="https://upload.wikimedia.org/wikipedia/en/4/45/A_Few_Good_Men_poster.jpg" />
+
+        <b>A Few Good Men</b>
+    </a>
+
+    <p>Drama, Thriller | 2h 18m </p>
+
+    <p>Military lawyer Lieutenant Daniel Kaffee defends Marines accused of murder. They contend they were acting under orders.</p>
+
+    <div class="movielistbottom">
+        <a class="btn btn-sm btn-primary ml-1" href="/Home/Details/3">Details</a>
+    </div>
+</div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+            Oliver Färnskog - Mittuniversitetet 2021©
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    
+</body>
+</html>

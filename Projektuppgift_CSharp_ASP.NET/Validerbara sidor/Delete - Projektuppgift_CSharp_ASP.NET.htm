@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete - Projektuppgift_CSharp_ASP.NET</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-white border-bottom box-shadow mb-3" id="navigationmeny">
+            <div class="container navdesign">
+                <form action="/" method="post">
+                    <button class="navtextbuttons">Olivers Filmlista <br /> - De du måste se om!</button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTmlCcASy0CY91gnqpXFfalHiTu88cyr1ZcD8qwhQxSv_5cGWuCFEGRq7yn8B6CaNIzHqGMFnZ6tXEJx5qd7Ih3jBZSIz8dtIGstD8aqXubtJrEoHwh_CndMy8OoyOajEH5FaYV6YGVxdrZWtbZ4DpvCu9gBtL59iRLfEBAC_aSp2w" /></form>
+                <button class="navbar-toggler spanclass" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item borderclass">
+                            <a class="navtext" href="/">Home</a>
+                        </li>
+
+                            <li class="nav-item borderclass">
+                                <a class="navtext" href="/Movie">Admin</a>
+                            </li>
+                    </ul>
+                    
+<ul class="navbar-nav">
+    <li class="nav-item borderclass">
+        <!--<a class="navtextaccount" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">oliver.farnskog@gmail.com!</a> -->
+        <form action="/Identity/Account/Manage" method="post">
+            <button class="navtextbuttons" title="Manage">oliver.farnskog@gmail.com!</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTmlCcASy0CY91gnqpXFfalHiTu88cyr1ZcD8qwhQxSv_5cGWuCFEGRq7yn8B6CaNIzHqGMFnZ6tXEJx5qd7Ih3jBZSIz8dtIGstD8aqXubtJrEoHwh_CndMy8OoyOajEH5FaYV6YGVxdrZWtbZ4DpvCu9gBtL59iRLfEBAC_aSp2w" /></form>
+        
+    </li>
+    <li class="nav-item borderclass">
+        <form class="form-inline" action="/Identity/Account/Logout?returnUrl=%2F" method="post">
+            <button id="logoutbutton" class="navtext btn btn-link">Logout</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTmlCcASy0CY91gnqpXFfalHiTu88cyr1ZcD8qwhQxSv_5cGWuCFEGRq7yn8B6CaNIzHqGMFnZ6tXEJx5qd7Ih3jBZSIz8dtIGstD8aqXubtJrEoHwh_CndMy8OoyOajEH5FaYV6YGVxdrZWtbZ4DpvCu9gBtL59iRLfEBAC_aSp2w" /></form>
+    </li>
+</ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main class="pb-3">
+            
+
+<!-- Scaffoldad HTML-kod via Razor designad för att ta bort film-instanser-->
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Title
+        </dt>
+        <dd class="col-sm-10">
+            My Cousin Vinny
+        </dd>
+        <dt class="col-sm-2">
+            Category
+        </dt>
+        <dd class="col-sm-10">
+            Comedy, Crime
+        </dd>
+        <dt class="col-sm-2">
+            Description
+        </dt>
+        <dd class="col-sm-10">
+            Two New Yorkers accused of murder in rural Alabama while on their way back to college call in the help of one of their cousins, a loudmouth lawyer with no trial experience.
+        </dd>
+        <dt class="col-sm-2">
+            Length
+        </dt>
+        <dd class="col-sm-10">
+            2h
+        </dd>
+        <dt class="col-sm-2">
+            ImageUrl
+        </dt>
+        <dd class="col-sm-10">
+            https://m.media-amazon.com/images/M/MV5BMTQxNDYzMTg1M15BMl5BanBnXkFtZTgwNzk4MDgxMTE@._V1_UX182_CR0,0,182,268_AL_.jpg
+        </dd>
+        <dt class="col-sm-2">
+            TrailerUrl
+        </dt>
+        <dd class="col-sm-10">
+            https://www.youtube.com/embed/SL4HdaZXuOw
+
+        </dd>
+        <dt class="col-sm-2">
+            IMDBUrl
+        </dt>
+        <dd class="col-sm-10">
+            https://www.imdb.com/title/tt0104952/
+
+        </dd>
+    </dl>
+
+    <form action="/Movie/Delete/1" method="post">
+        <input type="hidden" data-val="true" data-val-required="The Id field is required." id="Id" name="Id" value="1" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a class="backbuttons" href="/Movie">Back to List</a>
+    <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JMwpBBQeKFPjocLCqVMUTmlCcASy0CY91gnqpXFfalHiTu88cyr1ZcD8qwhQxSv_5cGWuCFEGRq7yn8B6CaNIzHqGMFnZ6tXEJx5qd7Ih3jBZSIz8dtIGstD8aqXubtJrEoHwh_CndMy8OoyOajEH5FaYV6YGVxdrZWtbZ4DpvCu9gBtL59iRLfEBAC_aSp2w" /></form>
+</div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+            Oliver Färnskog - Mittuniversitetet 2021©
+    </footer>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    
+</body>
+</html>

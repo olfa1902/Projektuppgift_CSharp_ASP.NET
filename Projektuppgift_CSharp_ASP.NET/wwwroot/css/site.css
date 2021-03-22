@@ -1,0 +1,194 @@
+﻿footer {
+    margin-top: 45px;
+}
+
+.deletecolor{
+    background-color: #FF0000;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+a:focus,button:focus,input[type=submit]:focus, .navtext:focus, .navtextbuttons:focus, .redirectlink:hover, span:hover{
+    border: 5px solid #FFFFFF;
+}
+
+.redirectlink:hover{
+    border: 5px solid;
+}
+
+.descriptionfield {
+    border: 3px solid #000000;
+    height: 150px;
+}
+
+.descriptionfield:focus{
+    border: 7px solid #75003B;
+}
+
+a:hover, button:hover, input[type=submit]:hover, .navtextbuttons:hover, .navtext:hover, .redirectlink {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.spanclass:focus {
+    outline: 5px solid #FFFFFF;
+}
+
+.navdesign {
+    background-color: #75003B;
+}
+
+.navtext{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+.navtextbuttons{
+    background-color: #75003B;
+    border: none;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-left: 25px;
+    margin-top: 8px;
+}
+
+.backbuttons {
+    background-color: #75003B;
+    padding: 2% 4%;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: auto;
+    margin-top: 2%;
+    width: 15%;
+    display: block;
+}
+
+iframe {
+    width: 620px;
+    height: 330px;
+    background-color: #383838;
+    padding: 5%;
+}
+
+p, b, #navigationmeny ul li, dt{
+    font-size: 1.2em;
+}
+
+#navigationmeny ul li button{
+    font-size: 1.05em;
+}
+
+.movielist img{
+    width: 20%;
+    float: left;
+    padding-right: 30px;
+}
+
+.movielistbottom {
+    margin-bottom: 16%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #75003B;
+}
+
+input[type="submit"] {
+    background-color: #75003B;
+    color: #FFFFFF;
+    text-decoration: underline;
+    padding: 3% 3%;
+}
+
+/*En svart border görs till standard för att sedan bytas till en större lila border vid klick på input-fältet*/
+input[type="text"], textarea, #intervall, input[type="tel"], input[type="date"], input[type="file"], input[type="number"], input[type="time"] {
+    border: 3px solid #000000;
+}
+
+input[type="text"]:focus, textarea:focus, #intervall:focus, input[type="tel"]:focus, input[type="date"]:focus, input[type="file"]:focus, input[type="number"]:focus, input[type="time"]:focus {
+    outline: none;
+    border: 7px solid #75003B;
+}
+
+form label {
+    font-size: 1.6em;
+    color: #75003B;
+}
+
+footer {
+    background-color: #75003B;
+    padding: 16px 31px;
+    text-align: center;
+    color: #FFFFFF;
+    overflow: auto;
+    width: 98%;
+    margin-left: 1%;
+}
+
+
+/*Sid-version för surfplattor och mobila enheter*/
+@media screen and (max-width: 990px) {
+
+    body{
+        width: 100%;
+    }
+
+    footer h3 {
+        color: #fff;
+    }
+
+    .movielist img{
+        width: 30%;
+    }
+
+    .backbuttons {
+        background-color: #75003B;
+        padding: 6% 6%;
+        text-align: center;
+        color: #FFFFFF;
+        overflow: auto;
+        margin-top: 4%;
+        width: 30%;
+        display: block;
+    }
+
+    iframe {
+        width: 470px;
+        height: 290px;
+        background-color: #383838;
+        padding: 5%;
+    }
+
+    @media screen and (max-width: 575px) {
+        .movielist img {
+            width: 100%;
+        }
+
+        a:focus, button:focus, input[type=submit]:focus, .navtext:focus, .navtextbuttons:focus, .redirectlink:hover, span:hover, .borderclass {
+            border: 9px solid;
+        }
+
+        .navtext:focus, .navtextbuttons:focus{
+            text-decoration: underline;
+        }
+
+        .backbuttons {
+            background-color: #75003B;
+            padding: 8% 8%;
+            text-align: center;
+            color: #FFFFFF;
+            overflow: auto;
+            margin-top: 14%;
+            width: 60%;
+            display: block;
+        }
+
+        iframe {
+            width: 90%;
+            height: 250px;
+            background-color: #383838;
+            padding: 5%;
+        }
+    }
+}
